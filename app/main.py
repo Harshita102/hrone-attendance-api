@@ -164,7 +164,9 @@ def health():
     except PyMongoError:
         raise HTTPException(
             status_code=503,
-            detail="Database unavailable"
+            detail="Database unavailable",
+        )
+
 
 # ------------------------------- models ---------------------------------
 class EmployeeIn(BaseModel):
